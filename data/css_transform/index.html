@@ -40,7 +40,7 @@
                                 <span class="mr-4">
                                     Скругление:
                                 </span>
-                               <input step="1" min="1" max="200" value="0" id="rounding" type="range">
+                               <input step="1" min="1" max="100" value="0" id="rounding" type="range">
                            </label>
                        </div>
                         <div class="border">
@@ -61,11 +61,11 @@
                                 <label class="d-flex justify-content-evenly align-items-center mb-3" for="">
                                     <span class="mr-4">Цвет</span>
                                     <div class="shadow-color d-flex">
-                                        <div value="#ffffff" class="color white"></div>
-                                        <div value="#ffff00" class="color yellow"></div>
-                                        <div value="#808080" class="color grey"></div>
-                                        <div value="#ff0000" class="color red"></div>
-                                        <div value="#0000ff" class="color blue"></div>
+                                        <div data-value="#ffffff" class="color white"></div>
+                                        <div data-value="#ffff00" class="color yellow"></div>
+                                        <div data-value="#808080" class="color grey"></div>
+                                        <div data-value="#ff0000" class="color red"></div>
+                                        <div data-value="#0000ff" class="color blue"></div>
                                     </div>
                                 </label>
 
@@ -89,11 +89,11 @@
                     </div>
 
                     <div class="color d-flex align-items-center justify-content-evenly py-5">
-                        <div data-color="Белый" value="#ffffff" class="colorBox white"></div>
-                        <div data-color="Жёлтый" value="#ffff00" class="colorBox yellow"></div>
-                        <div data-color="Серый" value="#808080" class="colorBox grey"></div>
-                        <div data-color="Красный" value="#ff0000" class="colorBox red"></div>
-                        <div data-color="Синий" value="#0000ff" class="colorBox blue"></div>
+                        <div data-color="Белый" data-value="#ffffff" class="colorBox white"></div>
+                        <div data-color="Жёлтый" data-value="#ffff00" class="colorBox yellow"></div>
+                        <div data-color="Серый" data-value="#808080" class="colorBox grey"></div>
+                        <div data-color="Красный" data-value="#ff0000" class="colorBox red"></div>
+                        <div data-color="Синий" data-value="#0000ff" class="colorBox blue"></div>
 
 
                     </div>
@@ -110,12 +110,12 @@
                         </div>
                     </div>
                     <div class="getTheCode">
-                        <button id="getTheCode">
+                        <button style="cursor:pointer;" id="getCode">
                             Получить код
                         </button>
-                        <div class="getTheCode__form mt-5">
+                        <code style="display: block" id="getCodeForm" class="getTheCode__form mt-5">
                             dwa
-                        </div>
+                        </code>
                     </div>
                 </div>
 
