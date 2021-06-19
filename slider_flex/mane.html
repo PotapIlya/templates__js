@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<style>
+	*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	font-weight: bold;
+	font-family: 'Amatic SC', cursive;
+}
+
+span{
+	color: #fff;
+	font-size: 40px;
+	text-shadow: 0px 0px 10px #000;
+}
+
+.karysel{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.item{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	height: 100vh;
+	flex-basis: 25%;
+
+	transition: 0.3s;
+}
+
+.item:hover{
+	flex-basis: 40%;
+}
+
+.item-1{
+	position: inherit;
+	background: url('./img/Без названия.jpg') no-repeat center center;
+	background-size: cover;
+}
+
+.item-2{
+	background: url('./img/depositphotos_189101336-stock-photo-daisy-colorful-flowers-summer-vertical.jpg') no-repeat center center;
+	background-size: cover;
+}
+
+.item-3{
+	background: url('./img/DSC_0057.JPG') no-repeat center center;
+	background-size: cover;
+}
+
+.item-4{
+	background: url('./img/Без названия (1).jpg') no-repeat center center;
+	background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 900px){
+
+	.karysel{
+		height: 100vh;
+		flex-flow: column;
+	}
+	.item{
+		width: 100%;
+	}
+
+	.item:hover{
+		height: : 130%;
+	}
+}
+</style>
+<body>
+	
+	<div class="karysel">
+		<div class="item item-1"><span>Лето</span></div>
+		<div class="item item-2"><span>Это</span></div>
+		<div class="item item-3"><span>Очень</span></div>
+		<div class="item item-4"><span>Крутое</span></div>
+	</div>
+
+
+	
+
+
+
+</body>
+</html>

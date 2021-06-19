@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	
+	.box{
+		list-style: none;
+	
+		border-radius: 50%;
+		background: red;
+		position: absolute;
+	}
+
+</style>
+<body>
+	
+
+	<main>
+		
+		<div id="main">
+			<div id="box"></div>
+		</div>
+
+		<input id="size" type="text">
+
+
+	</main>
+
+
+</body>
+<script>
+	
+	const main = document.getElementById('main');
+	const box = document.getElementById('box');
+	const size = document.getElementById('size');
+	let mouse = false;
+	let sizeNum = 10;
+
+	window.addEventListener('mousedown', () => mouse = true )
+
+	window.addEventListener('mouseup', () =>{
+		mouse = false;
+		document.querySelectorAll('li').forEach(item => item.remove())
+	})
+
+	size.addEventListener('input', () => sizeNum = size.value )
+ 
+	
+
+
+
+
+	window.addEventListener('mousemove', (e) =>
+	{
+		if (mouse)
+		{
+			const li = document.createElement('li')
+
+			li.classList.add('box')
+			
+			li.style.top = e.clientY-15+'px'
+			li.style.left = e.clientX-15+'px'
+
+			li.style.width = sizeNum-(sizeNum/2)+'px'
+			li.style.height = sizeNum-(sizeNum/2)+'px'
+
+			box.appendChild(li)
+
+
+	
+
+		}
+	})
+
+
+	
+
+</script>
+</html>

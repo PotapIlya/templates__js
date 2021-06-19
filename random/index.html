@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .container{
+        
+        width: 1200px;
+        margin: 10px auto;
+    }
+    body{
+        height: calc(100vh - 60px);
+        width: 100%;
+        background: #000;
+        color: #fff;
+    }
+    .box{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    img{
+        width: 25%;
+        border: 5px solid transparent;
+    }
+    button{
+        padding: 40px;
+        margin: 20px auto;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #progress{
+        position: absolute;
+        bottom: 122px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 400px;
+    }
+    .active-hover{
+        border: 5px solid red;
+    }
+    .active{
+
+        border: 5px solid green !important;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+</style>
+
+</head>
+<body>
+    
+
+    <div class="container">
+
+        <meter id="progress" value="0" min="0" max="10" low="2" high="8"> </meter>
+
+        <div class="box">
+            <img src="img/flower_1.jpg" alt="">
+            <img src="img/flower_3.jpg" alt="">
+            <img src="img/flower_4.jpg" alt="">
+            <img src="img/flower_5.jpg" alt="">
+            <img src="img/flower_7.jpg" alt="">
+            <img src="img/flower_8.jpg" alt="">
+            <img src="img/flower_9.jpg" alt="">
+            <img src="img/main_bg.jpg" alt="">
+            <img src="img/persone_3.jpg" alt="">
+            <img src="img/persone_4.jpg" alt="">
+            <img src="img/persone_5.jpg" alt="">
+            <img src="img/services_1.jpg" alt="">
+        </div>
+        <button id="random">Random</button>
+    </div>
+
+</body>
+<script>
+
+
+    const img = document.querySelectorAll('img');
+    const random = document.getElementById('random');
+    const progress = document.getElementById('progress'); 
+    const ar = []
+
+    random.addEventListener('click', () =>
+    {
+        let leading = 0;
+        let interval = setInterval(() =>{ // загрузка progress
+            leading += 2;
+            progress.value = leading;
+
+            rand(img, ar)
+        
+            if (leading === 10){
+                ar[ar.length-1].classList.add('active')
+                clearTimeout(interval)        
+            }
+    
+        }, 500);
+        
+    })
+
+
+    const rand = (img, ar) =>{
+
+        let array = []
+        img.forEach((x) =>{ // снять со всех active-hover
+            x.classList.remove('active-hover')
+            x.classList.remove('active')
+        })
+        
+        for (let i = 0; i < img.length; i++) { // перебор всех элементов для записи в массив
+            array.push(i)
+        }
+
+        let res = Math.floor(Math.random() * (array.length-1 - array[0] + 1)) + array[0]; //рандом
+        img[res].classList.add('active-hover');
+
+        ar.push(img[res]) // for class "active''
+    }
+
+
+</script>
+</html>
