@@ -1,82 +1,44 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
+    <meta charset="UTF-8">
+    <title>Тайтл</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Описание">
+    <meta name="author" content="Potap">
+
+    <link rel="stylesheet" href="./assets/release/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="./assets/release/css/app.css">
 </head>
-<style>
-	
-	.box{
-		list-style: none;
-	
-		border-radius: 50%;
-		background: red;
-		position: absolute;
-	}
-
-</style>
 <body>
-	
+    <header>
+        <a style="margin: 80px 0 0 100px; font-size: 40px; color: #fff; text-decoration: none"  href="/">
+            Home
+        </a>
+    </header>
+        <main>
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <a href="./data/3d_hover/index.html" class="col-3">
+                            3d hover
+                        </a>
+                        <a href="./data/css_transform/index.html" class="col-3">
+                            css_transform
+                        </a>
+                        <div class="col-3">
+                            3
+                        </div>
+                        <div class="col-3">
+                            4
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    <footer>
 
-	<main>
-		
-		<div id="main">
-			<div id="box"></div>
-		</div>
-
-		<input id="size" type="text">
-
-
-	</main>
-
+    </footer>
 
 </body>
-<script>
-	
-	const main = document.getElementById('main');
-	const box = document.getElementById('box');
-	const size = document.getElementById('size');
-	let mouse = false;
-	let sizeNum = 10;
-
-	window.addEventListener('mousedown', () => mouse = true )
-
-	window.addEventListener('mouseup', () =>{
-		mouse = false;
-		document.querySelectorAll('li').forEach(item => item.remove())
-	})
-
-	size.addEventListener('input', () => sizeNum = size.value )
- 
-	
-
-
-
-
-	window.addEventListener('mousemove', (e) =>
-	{
-		if (mouse)
-		{
-			const li = document.createElement('li')
-
-			li.classList.add('box')
-			
-			li.style.top = e.clientY-15+'px'
-			li.style.left = e.clientX-15+'px'
-
-			li.style.width = sizeNum-(sizeNum/2)+'px'
-			li.style.height = sizeNum-(sizeNum/2)+'px'
-
-			box.appendChild(li)
-
-
-	
-
-		}
-	})
-
-
-	
-
-</script>
 </html>

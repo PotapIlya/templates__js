@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AppTransform</title>
+
+    <link rel="stylesheet" href="./../../assets/release/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="./../../assets/release/css/app.css">
+</head>
+<body>
+
+        <section class="app_transform">
+            <a style="margin: 100px 0 0 130px; font-size: 40px; color: #fff; text-decoration: none"  href="./../../index.html">
+                Home
+            </a>
+        <div class="container h-100 d-flex justify-content-center align-items-center">
+
+                <div class="col-6">
+
+                    <div class="py-5">
+                        <div class="border">
+                            <label class="d-flex justify-content-evenly align-items-center py-2" for="">
+                                <span class="mr-4">
+                                    Ширина:
+                                </span>
+                                <input step="1" min="1" max="300" value="150" id="width" type="range">
+                            </label>
+                            <label class="d-flex justify-content-evenly align-items-center py-2" for="">
+                                <span class="mr-4">
+                                    Высота:
+                                </span>
+                                <input step="1" min="1" max="300" value="150" id="height" type="range">
+                            </label>
+                        </div>
+                       <div class="border">
+                           <label class="d-flex justify-content-evenly align-items-center" for="">
+                                <span class="mr-4">
+                                    Скругление:
+                                </span>
+                               <input step="1" min="1" max="200" value="0" id="rounding" type="range">
+                           </label>
+                       </div>
+                        <div class="border">
+                            <div class="shadow d-flex flex-column justify-content-center align-items-center" for="">
+                                <h5 class="text-center mb-3">Тень</h5>
+                                <label class="d-flex justify-content-evenly align-items-center mb-3" for="">
+                                    <span class="mr-4">ОсьX</span>
+                                    <input step="1" min="-30" max="30" value="0" id="shadowX" type="range">
+                                </label>
+                                <label class="d-flex justify-content-evenly align-items-center mb-3" for="">
+                                    <span class="mr-4">ОсьY</span>
+                                    <input step="1" min="-30" max="30" value="0" id="shadowY" type="range">
+                                </label>
+                                <div class="d-flex justify-content-evenly align-items-center mb-3" for="">
+                                    <span class="mr-4">Размытие</span>
+                                    <input step="1" min="0" max="50" value="0" id="shadowF" type="range">
+                                </div>
+                                <label class="d-flex justify-content-evenly align-items-center mb-3" for="">
+                                    <span class="mr-4">Цвет</span>
+                                    <div class="shadow-color d-flex">
+                                        <div value="#ffffff" class="color white"></div>
+                                        <div value="#ffff00" class="color yellow"></div>
+                                        <div value="#808080" class="color grey"></div>
+                                        <div value="#ff0000" class="color red"></div>
+                                        <div value="#0000ff" class="color blue"></div>
+                                    </div>
+                                </label>
+
+
+                            </div>
+                        </div>
+                        <div class="border">
+                            <label class="d-flex justify-content-evenly align-items-center mb-3" for="">
+                                <span class="mr-4">
+                                    Поворот:
+                                </span>
+                                <input step="1" min="1" max="360" value="0" id="rotate" type="range">
+                            </label>
+                            <label class="d-flex justify-content-evenly align-items-center" for="">
+                                <span class="mr-4">
+                                    Наклонить:
+                                </span>
+                                <input step="1" min="-40" max="40" value="0" id="skew" type="range">
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="color d-flex align-items-center justify-content-evenly py-5">
+                        <div data-color="Белый" value="#ffffff" class="colorBox white"></div>
+                        <div data-color="Жёлтый" value="#ffff00" class="colorBox yellow"></div>
+                        <div data-color="Серый" value="#808080" class="colorBox grey"></div>
+                        <div data-color="Красный" value="#ff0000" class="colorBox red"></div>
+                        <div data-color="Синий" value="#0000ff" class="colorBox blue"></div>
+
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-6 d-flex flex-column justify-content-center align-items-center">
+                    <div id="figure" class="figure mb-5">
+                        <div class="sizes">
+                            <div class="width">200px</div>
+                            <div class="height">200px</div>
+                            <div class="number">1</div>
+                        </div>
+                    </div>
+                    <div class="getTheCode">
+                        <button id="getTheCode">
+                            Получить код
+                        </button>
+                        <div class="getTheCode__form mt-5">
+                            dwa
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+    </section>
+    <script src="./../../assets/release/js/scripts.js"></script>
+</body>
+</html>
